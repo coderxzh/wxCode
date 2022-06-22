@@ -1,0 +1,23 @@
+<view class="header"  bindtap="toLogin">
+ <image wx:if="{{userInfo.avatarUrl}}" src="{{userInfo.avatarUrl}}"></image>
+ <image  wx:else src="https://636c-cloud1-2gyeznikb55b400a-1308009321.tcb.qcloud.la/pics/%E7%94%B7%E5%AD%A91.png?sign=b312bb3d110e13b556d21409c2d8cb26&t=1639989035"></image>
+ <view class="nickName" wx:if="{{userInfo.nickName}}">
+    <text>{{userInfo.nickName}}</text>
+    <text>ID:{{userInfo.u_id}}</text>
+ </view>
+ <view class="toLogin" wx:else>
+    <text>立即登录</text>
+ </view>
+ <van-icon name="arrow" class="arrow" />
+</view>
+
+<view class="main">
+    <view>个人设置</view>
+    <view>地址管理</view>
+    <view>校园论坛</view>
+    <view>我的订单</view>
+    <view>系统设置</view>
+</view>
+<view class="logout" bindtap="logout" wx:if="{{userInfo.nickName}}"><text>退出登录</text></view>
+<van-dialog id="van-dialog" />
+<van-notify id="van-notify" />

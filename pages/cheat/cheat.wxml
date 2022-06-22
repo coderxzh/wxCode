@@ -1,0 +1,18 @@
+<view class="info">
+    <input type="text" bindinput="getInfo" bindfocus="focus" value="{{info}}"/>
+    <view class="icon" wx:if="{{!show}}" bindtap="upLoad">
+        <van-icon name="add-o"  size="23" />
+    </view>
+    <view wx:if="{{show}}" bindtap="send">
+        <van-transition show="{{ show }}" custom-class="block">
+            <view class="btn" bindtap="toUpload">发布</view>
+        </van-transition>
+    </view>
+</view>
+<view class="left">
+    <van-divider contentPosition="center" wx:if="{{isEmpt}}">没有更多消息了</van-divider>
+    <view wx:for="{{message}}" wx:key="_id" class="{{item.OPENID == userInfo.OPENID ? 'item-r':'item'}}">
+            <image src="{{item.avatarUrl}}"></image>
+        <view class="mes" wx:if="{{item.info}}">{{item.info}}</view>
+    </view>
+</view>

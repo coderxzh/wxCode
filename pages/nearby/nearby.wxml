@@ -1,0 +1,34 @@
+<view class="main" style="position: relative;">
+    <view class="top">
+        <view class="address"><text wx:if="{{address}}" class="iconfont icon-ditu-dibiao" style="margin-right: 5px;"></text>{{address}}</view> 
+        <view class="right">
+            <van-search value="{{ value }}" placeholder="探索周边"  
+            shape="round" custom-class="search" disabled bind:click-input = "search"/> 
+        </view>  
+    </view>
+</view>
+<view class="middle">
+     <view class="module">
+        <view class="item" bindtap="getOut">
+            <image src="https://636c-cloud1-2gyeznikb55b400a-1308009321.tcb.qcloud.la/pics/%E8%A1%8C%E8%B5%B0%E7%94%B7.png?sign=d614864346b07dfd35a285cb9941811e&t=1639988707"></image>
+            <view>出行规划</view>
+        </view>
+
+        <view bindtap="subway" class="item" style="background-image: linear-gradient(90deg, #37ecba 0%, #72afd3 100%);">
+            <image src="https://636c-cloud1-2gyeznikb55b400a-1308009321.tcb.qcloud.la/pics/%E6%88%BF%E8%BD%A6%20(1).png?sign=c6bb3017235979f23eba080cd56e9047&t=1639988804"></image>
+            <view>成都地铁</view>
+        </view> 
+        
+     </view>
+
+     <view class="module">
+        <view bindtap="search" class="item" style="background-image: linear-gradient(120deg, #fa709a 0%, #fee140 100%);">
+            <image src="https://636c-cloud1-2gyeznikb55b400a-1308009321.tcb.qcloud.la/pics/Hello.png?sign=44e048f1c0ee0310e2932cdb136e7e40&t=1639989009"></image>
+            <view>探索周边</view>
+        </view>
+        <view class="item" bindtap="getOut">
+            <image src="https://636c-cloud1-2gyeznikb55b400a-1308009321.tcb.qcloud.la/pics/%E5%AE%A2%E5%8E%85%E4%BA%BA%E5%92%8C%E7%8C%AB.png?sign=3f6b29699fbc79004e408404e6d717f8&t=1639988830"></image>
+            <view>出行规划</view>
+        </view>
+     </view>   
+</view>    

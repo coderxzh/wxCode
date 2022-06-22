@@ -1,0 +1,28 @@
+<view class="content">
+    <view class="main" wx:for="{{messages}}" wx:key="_id">
+        <image class="avatar" src="{{item.avatarUrl}}"></image>
+        <view class="messages">
+            <text class="nickName">{{item.nickName}}</text>
+            <text>{{item.content}}</text>
+            <van-image
+            width="220px"
+            height="100px"
+            radius="4"
+            fit="cover"
+            src="{{item.cover}}"
+            lazy-load
+            class="cover"
+            />
+            <text class="time">{{item.create}}</text>  
+        </view>
+    </view>
+    <view class="add" bindtap="toAdd">
+        <van-icon name="add" />
+    </view>
+    <view wx:if="{{loading}}" class="loading">
+        <van-loading color="#1989fa" />
+    </view>
+    <view  wx:if="{{isALL}}" class="isALL">
+        <van-divider contentPosition="center" >没有更多数据了</van-divider> 
+    </view>  
+</view>

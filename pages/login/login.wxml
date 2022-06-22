@@ -1,0 +1,4 @@
+<view class="login">
+<image src="https://636c-cloud1-2gyeznikb55b400a-1308009321.tcb.qcloud.la/pics/%E7%94%B7%E5%AD%A91.png?sign=b312bb3d110e13b556d21409c2d8cb26&t=1639989035"></image>
+<view class="iconfont icon-weixin" bindtap="login"><text>微信用户一键登录</text></view>
+</view>

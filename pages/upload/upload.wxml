@@ -1,0 +1,15 @@
+<!--pages/upload/upload.wxml-->
+<view class="upload">
+  <view class="top">
+    <view bindtap="cancel">取消</view>
+    <button class="btn" bindtap="toUpload">发布</button>
+  </view>
+  <textarea name="message" cols="20" class="message" placeholder="说点什么吧..." bindinput="messages"></textarea>
+  <view class="img">
+    <van-uploader file-list="{{fileList}}" bind:after-read="afterRead"  deletable="{{true}}"  max-count="1"/>
+  </view>
+</view>
+
+<van-toast id="van-toast" wx:if="{{loading}}" />
+
+<van-notify id="van-notify" />

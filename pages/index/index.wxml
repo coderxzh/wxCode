@@ -1,0 +1,83 @@
+<!-- 搜索框 -->
+<van-search
+  value="{{ value }}"
+  shape="round"
+  background="#409EFF"
+  placeholder="请输入搜索关键词"
+  custom-class="search"
+/>
+
+<!-- 轮播图 -->
+<view class="swiper">
+  <view style="border-radius: 10px; overflow: hidden;">
+    <swiper indicator-dots indicator-color 	indicator-active-color="#409EFF" autoplay >
+        <swiper-item><image src="https://636c-cloud1-2gyeznikb55b400a-1308009321.tcb.qcloud.la/pics/wallhaven-wqdglr.jpg?sign=f54ad9ac624cc798c39d0366589bd61e&t=1639989109"></image></swiper-item>
+        <swiper-item><image src="https://636c-cloud1-2gyeznikb55b400a-1308009321.tcb.qcloud.la/pics/202109131417272.jpg?sign=f12f8b079624a09a1997a427233ff794&t=1639989216"></image></swiper-item>
+        <swiper-item><image src="https://636c-cloud1-2gyeznikb55b400a-1308009321.tcb.qcloud.la/pics/wallhaven-g7d96e.jpg?sign=1d1a8d7593c515c1dc28b7f3f53dcca6&t=1639989272"></image></swiper-item>
+        <swiper-item><image src="https://636c-cloud1-2gyeznikb55b400a-1308009321.tcb.qcloud.la/pics/202110190140271.png?sign=f022266babf10a1f0d0f58a307b729f2&t=1639989362"></image></swiper-item>
+    </swiper>
+  </view>
+</view>
+
+<scroll-view scroll-y>
+  <view class="nav">
+    <van-tabs active="{{ active }}" swipeable title-active-color="#409EFF"
+    color="#409EFF" line-width="70rpx" line-height="2px" ellipsis="false" border bind:click="getNews" bind:change="getNews">
+    <!-- top条 -->
+      <van-tab title="头条新闻">
+          <view class="topNews">
+            <view class="top-item" wx:for="{{moreNews}}" wx:key="cid" id="{{item.url}}" bindtap="getMore">
+              <view class="title">
+                <text class="keywords">{{item.title}}</text>
+                <text style="margin-top: 10px;font-size: 11px; color: #666;">{{item.source}}</text>
+              </view>
+              <image src="{{item.imgsrc}}"></image>
+            </view>
+          </view>
+      </van-tab>
+     <!--  -->
+     <van-tab title="精选" name="nc/article/list/T1467284926140/0-20.html">
+          <view class="topNews">
+            <view class="top-item" wx:for="{{moreOtherNews}}" wx:key="cid" id="{{item.url}}" bindtap="getMore">
+              <view class="title">
+                <text class="keywords">{{item.title}}</text>
+                <text style="margin-top: 10px;font-size: 11px; color: #666;">{{item.source}}</text>
+              </view>
+              <image src="{{item.imgsrc}}"></image>
+            </view>
+          </view>
+      </van-tab>
+      <!--  -->
+      <van-tab title="运动" name="nc/article/list/T1348649079062/0-20.html">
+          <view class="topNews">
+            <view class="top-item" wx:for="{{moreOtherNews}}" wx:key="cid" id="{{item.url}}" bindtap="getMore">
+              <view class="title">
+                <text class="keywords">{{item.title}}</text>
+                <text style="margin-top: 10px;font-size: 11px; color: #666;">{{item.source}}</text>
+              </view>
+              <image src="{{item.imgsrc}}"></image>
+            </view>
+          </view>
+      </van-tab>
+      <!--  -->
+      <van-tab title="娱乐"  name="nc/article/list/T1348648517839/0-20.html">
+          <view class="topNews">
+            <view class="top-item" wx:for="{{moreOtherNews}}" wx:key="cid" id="{{item.url}}" bindtap="getMore">
+              <view class="title">
+                <text class="keywords">{{item.title}}</text>
+                <text style="margin-top: 10px;font-size: 11px; color: #666;">{{item.source}}</text>
+              </view>
+              <image src="{{item.imgsrc}}"></image>
+            </view>
+          </view>
+      </van-tab>
+   </van-tabs>
+    <view  wx:if="{{isAll}}">
+          <van-divider contentPosition="center">没有更多数据了</van-divider> 
+    </view>
+  </view>
+</scroll-view>
+    
+<view wx:if="{{loading}}" class="loading">
+    <van-loading color="#1989fa" />
+</view>

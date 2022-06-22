@@ -1,0 +1,86 @@
+{
+    "cloud": true,
+    "permission": {
+        "scope.userLocation": {
+          "desc": "你的位置信息将用于小程序位置接口的效果展示" 
+        }
+    },
+    "plugins": {
+        "chooseLocation": {
+        "version": "1.0.9",
+        "provider": "wx76a9a06e5b4e693e"
+        },
+        "routePlan": {
+            "version": "1.0.18",
+            "provider": "wx50b5593e81dd937a"
+        },
+        "subway": {
+            "version": "1.0.13",
+            "provider": "wx6aaf93c4435fa1c1"
+        }
+    },
+    "pages": [
+        "pages/index/index",
+        "pages/profile/profile",
+        "pages/upload/upload",
+        "pages/news/news",
+        "pages/wall/wall",
+        "pages/login/login",
+        "pages/nearby/nearby",
+        "pages/location/location",
+        "pages/line/line",
+        "pages/subway/subway",
+        "pages/cheat/cheat"
+    ],
+    "usingComponents": {
+        "van-image": "@vant/weapp/image/index",
+        "van-config-provider": "@vant/weapp/config-provider/index",
+        "van-icon": "@vant/weapp/icon/index",
+        "van-tabbar": "@vant/weapp/tabbar/index",
+        "van-tabbar-item": "@vant/weapp/tabbar-item/index",
+        "van-uploader": "@vant/weapp/uploader/index",
+        "van-dialog": "@vant/weapp/dialog/index",
+        "van-divider": "@vant/weapp/divider/index",
+        "van-notify": "@vant/weapp/notify/index",
+        "van-loading": "@vant/weapp/loading/index",
+        "van-overlay": "@vant/weapp/overlay/index",
+        "van-toast": "@vant/weapp/toast/index",
+        "van-search": "@vant/weapp/search/index",
+        "van-popup": "@vant/weapp/popup/index",
+        "van-transition": "@vant/weapp/transition/index"
+    },
+    "tabBar": {
+        "custom": true,
+        "backgroundColor": "#ffffff",
+        "color": "#999",
+        "selectedColor": "#d43a3c",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "首页"
+            },
+            {
+                "pagePath": "pages/wall/wall",
+                "text": "贴吧"
+            },
+            {
+                "pagePath": "pages/cheat/cheat",
+                "text": "聊天室"
+            },
+            {
+                "pagePath": "pages/nearby/nearby",
+                "text": "周边"
+            },
+            {
+                "pagePath": "pages/profile/profile",
+                "text": "个人"
+            }
+            
+        ]
+    },
+    "window": {
+        "navigationBarBackgroundColor":"#409EFF",
+         "navigationBarTitleText":"智慧校园"
+    },
+    "sitemapLocation": "sitemap.json"
+}

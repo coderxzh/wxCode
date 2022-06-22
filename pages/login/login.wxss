@@ -1,0 +1,24 @@
+/* pages/login/login.wxss */
+.login {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+}
+.login image{
+    width: 200rpx;
+    height: 200rpx;
+    margin: 40px;
+}
+.login view{
+    width: 75%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background-color: #409EFF;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+}

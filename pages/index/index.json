@@ -1,0 +1,12 @@
+{
+    "usingComponents": {
+        "van-button": "@vant/weapp/button/index",
+        "van-tab": "@vant/weapp/tab/index",
+        "van-tabs": "@vant/weapp/tabs/index"
+      },
+      "navigationBarBackgroundColor":"#409EFF",
+      "enablePullDownRefresh": true,
+      "onReachBottomDistance": 50,
+      "navigationBarTitleText":"智慧校园"
+    
+}

@@ -1,0 +1,60 @@
+{
+    "setting": {},
+    "condition": {
+        "plugin": {
+            "list": []
+        },
+        "game": {
+            "list": []
+        },
+        "gamePlugin": {
+            "list": []
+        },
+        "miniprogram": {
+            "list": [
+                {
+                    "name": "pages/index/index",
+                    "pathName": "pages/index/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/profile/profile",
+                    "pathName": "pages/profile/profile",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/login/login",
+                    "pathName": "pages/login/login",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/upload/upload",
+                    "pathName": "pages/upload/upload",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/wall/wall",
+                    "pathName": "pages/wall/wall",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/nearby/nearby",
+                    "pathName": "pages/nearby/nearby",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/cheat/cheat",
+                    "pathName": "pages/cheat/cheat",
+                    "query": "",
+                    "scene": null
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,57 @@
+.content{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+    box-sizing: border-box !important;
+    margin-bottom: 60px;
+}
+.content .main{
+    display: flex;
+    justify-content: left;
+    margin: 5px 0;
+    padding: 10px;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1)
+}
+.content .messages{
+    margin: 0;
+    width: 80%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 5rpx 8px;
+    box-sizing: border-box !important;
+}
+.content .messages .cover{
+    margin-top:10px;
+}
+.content .messages .nickName{
+    color: rgb(67, 67, 167);
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.content .messages text{
+    font-size: 15px;
+}
+.content .messages .time{
+    margin-top: 10px;
+    font-size: 12px;
+}
+.content .avatar{
+    width: 35px ;
+    height: 35px;
+    border-radius: 5px;
+}
+.content .add{
+    position: fixed;
+    bottom: 80px;
+    right: 30px;
+    color: #409EFF;
+    font-size: 40px;
+}
+.loading{
+    position: fixed;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
